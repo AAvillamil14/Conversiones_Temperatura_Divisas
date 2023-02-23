@@ -5,6 +5,7 @@
  */
 package Monedas;
 
+import Conversiones.Menu;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
@@ -15,16 +16,48 @@ import javax.swing.JOptionPane;
 public class Libra extends Moneda {
 
     public void libras() {
-        DecimalFormat limitando = new DecimalFormat("#.00");
-        String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
-        String nombre= "libras esterlinas";
-        double moneda = Double.valueOf(valor);
-        double libra =5934.14d;
-        super.setValor(moneda);
-        super.setDivisa(libra);
-        super.setNombre(nombre);
-        super.divisas();
-        
-    }
 
+        try {
+            Menu menu = new Menu();
+            String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
+            String nombre = "libras esterlinas";
+            try {
+                double moneda = Double.valueOf(valor);
+                double libra = 5875.74d;
+                super.setValor(moneda);
+                super.setDivisa(libra);
+                super.setNombre(nombre);
+                super.divisas();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
+                menu.menufuncion();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gracias por su atención");
+        }
+
+    }
+    
+     public void p_libras() {
+        DecimalFormat limitando = new DecimalFormat("#.00");
+        try {
+            Menu menu = new Menu();
+            String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
+            String nombre = "libras esterlinas";
+            try {
+                double moneda = Double.valueOf(valor);
+                double peso_col = 5875.74d;
+                super.setValor(moneda);
+                super.setDivisa(peso_col);
+                super.setNombre(nombre);
+                super.p_divisas();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
+                menu.menufuncion();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gracias por su atención");
+        }
+
+    }
 }

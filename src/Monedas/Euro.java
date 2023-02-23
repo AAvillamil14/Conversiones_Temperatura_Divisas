@@ -5,6 +5,7 @@
  */
 package Monedas;
 
+import Conversiones.Menu;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
@@ -14,25 +15,45 @@ import javax.swing.JOptionPane;
  */
 public class Euro extends Moneda {
 
-    
     public void euros() {
-        
-        String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
-        double moneda = Double.valueOf(valor);
-        double euro = 5226.30d;
-        String nombre = "euros";
-        super.setNombre(nombre);
-        super.setValor(moneda);
-        super.setDivisa(euro);
-        super.divisas();
-//        if (valor == null) {
-//            JOptionPane.showMessageDialog(null, "Debes ingresar un valor");
-//        } else if (moneda == 0) {
-//            JOptionPane.showMessageDialog(null, "Si quieres puedes volverlo a intentar, ya que no se admiten valores iguales a 0");
-//        } else {
-//            super.divisas();
-//        }
+        try {
+            String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
+            Menu menu = new Menu();
+            try {
+                double moneda = Double.valueOf(valor);
+                double euro = 5226.30d;
+                String nombre = "euros";
+                super.setNombre(nombre);
+                super.setValor(moneda);
+                super.setDivisa(euro);
+                super.divisas();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
+                menu.menufuncion();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gracias por su atención");
+        }
         
     }
-
+    public void p_euros(){
+        try {
+            String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
+            Menu menu = new Menu();
+            try {
+                double moneda = Double.valueOf(valor);
+                double peso_c = 5161.18d;
+                String nombre = "euros";
+                super.setNombre(nombre);
+                super.setValor(moneda);
+                super.setDivisa(peso_c);
+                super.p_divisas();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
+                menu.menufuncion();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gracias por su atención");
+        }
+    }
 }

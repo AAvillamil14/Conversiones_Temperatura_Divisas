@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Apis;
+package Temperatura;
 
 /**
  *
  * @author USUARIO
  */
-public class Apis {
+public class Fahrenheit extends Temperatura{
     
 }

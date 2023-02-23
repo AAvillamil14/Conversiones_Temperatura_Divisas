@@ -15,32 +15,39 @@ import javax.swing.JOptionPane;
  */
 public class Menu {
 
-    private String arreglo[] = {"Seleccione una opcion", "Conversion de moneda", "Conversion de temperatura", "Conversion de peso"};
+    private String arreglo[] = {"Seleccione una opcion", "Conversion de pesos colombianos a monedas extranjeras", "Conversion de monedas extranjeras a pesos colombianos", "Conversion de temperatura", "Conversion de peso"};
 
     public void menufuncion() {
         Moneda monedas = new Moneda();
-        //return  JOptionPane.showInputDialog(null, "ingrese una opcion", "Menú", JOptionPane.INFORMATION_MESSAGE , null, arreglo, arreglo[0]).toString();
-        String opcion = (JOptionPane.showInputDialog(null, "ingrese una opcion", "Menú", JOptionPane.INFORMATION_MESSAGE, null, arreglo, arreglo[0])).toString();
-        switch (opcion) {
-            case "Conversion de moneda":
-                monedas.logicaMonedas();
-                break;
-            case "Conversion de temperatura":
-                JOptionPane.showMessageDialog(null, "temperatura");
-                break;
-            case "Conversion de peso":
-                int valor = JOptionPane.showConfirmDialog(null, "¿Quieres continuar convirtiendo?");
-                if (valor == 0) {
-                    menufuncion();
-                } else {
-                    JOptionPane.showMessageDialog(null, "Gracias por su atención");
-                }
-                break;
-            default:
-                JOptionPane.showMessageDialog(null, "debe ingresar  una opcion");
-                menufuncion();
-                break;
 
+        try {
+            String opcion = (JOptionPane.showInputDialog(null, "ingrese una opcion", "Menú", JOptionPane.INFORMATION_MESSAGE, null, arreglo, arreglo[0])).toString();
+            switch (opcion) {
+                case "Conversion de pesos colombianos a monedas extranjeras":
+                    monedas.peso_extranjera();
+                    break;
+                case "Conversion de monedas extranjeras a pesos colombianos":
+                    monedas.peso_extranjera();
+                    break;
+                case "Conversion de temperatura":
+                    JOptionPane.showMessageDialog(null, "temperatura");
+                    break;
+                case "Conversion de peso":
+                    int valor = JOptionPane.showConfirmDialog(null, "¿Quieres continuar convirtiendo?");
+                    if (valor == 0) {
+                        menufuncion();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Gracias por su atención");
+                    }
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "debe ingresar  una opcion");
+                    menufuncion();
+                    break;
+
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gracias por su atención");
         }
 
     }

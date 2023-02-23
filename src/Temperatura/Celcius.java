@@ -9,6 +9,6 @@ package Temperatura;
  *
  * @author USUARIO
  */
-public class Temperatura {
-    String nombre;
+public class Celcius extends Temperatura{
+    
 }

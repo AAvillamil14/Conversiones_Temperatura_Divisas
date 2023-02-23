@@ -14,20 +14,11 @@ import javax.swing.JOptionPane;
  * @author USUARIO
  */
 public class Conversiones {
-    public static void main(String[] args) {
-       Menu menu = new Menu();
-       menu.menufuncion();
- 
-      
-      
-        
-                
-                
-        
-                
-                
-        }
-        
-    }
-    
 
+    public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.menufuncion();
+       
+    }
+
+}
