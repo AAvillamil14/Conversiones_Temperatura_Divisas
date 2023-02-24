@@ -16,7 +16,6 @@ import javax.swing.JOptionPane;
 public class Dolar extends Moneda {
 
     public void dolares() {
-        DecimalFormat limitando = new DecimalFormat("#.00");
         try {
             String valor = (JOptionPane.showInputDialog(null, "Ingrese el valor que quiere convertir")).toString();
             Menu menu = new Menu();
