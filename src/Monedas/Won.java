@@ -30,7 +30,7 @@ public class Won extends Moneda {
                 super.divisas();
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
-                menu.menufuncion();
+                menu.menuM();
             }
         } catch (HeadlessException e) {
             JOptionPane.showMessageDialog(null, "Gracias por su atención");
@@ -44,14 +44,14 @@ public class Won extends Moneda {
             try {
                 double moneda = Double.valueOf(valor);
                 double peso_co = 3.76d;
-                String nombre = "euros";
+                String nombre = "wones sur coreanos";
                 super.setNombre(nombre);
                 super.setValor(moneda);
                 super.setDivisa(peso_co);
                 super.p_divisas();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
-                menu.menufuncion();
+                menu.menuM();
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Gracias por su atención");

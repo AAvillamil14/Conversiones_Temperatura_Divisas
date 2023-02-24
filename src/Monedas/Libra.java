@@ -30,7 +30,7 @@ public class Libra extends Moneda {
                 super.divisas();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
-                menu.menufuncion();
+                menu.menuM();
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Gracias por su atención");
@@ -53,7 +53,7 @@ public class Libra extends Moneda {
                 super.p_divisas();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Ingresa un valor valido");
-                menu.menufuncion();
+                menu.menuM();
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Gracias por su atención");

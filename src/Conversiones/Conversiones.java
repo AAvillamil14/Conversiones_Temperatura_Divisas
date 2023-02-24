@@ -5,10 +5,7 @@
  */
 package Conversiones;
 
-import Monedas.Moneda;
-import Temperatura.Kelvin;
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -18,8 +15,7 @@ public class Conversiones {
 
     public static void main(String[] args) {
         Menu menu = new Menu();
-        menu.menufuncion();
-
+        menu.menuPrincipal();
     }
 
 }

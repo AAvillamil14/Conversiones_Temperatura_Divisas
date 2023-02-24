@@ -54,7 +54,7 @@ public class Moneda {
             Libra libra = new Libra();
             Yen yen = new Yen();
             Won won = new Won();
-            String opcion = (JOptionPane.showInputDialog(null, "ingrese una opcion", "Menú", JOptionPane.INFORMATION_MESSAGE, null, arregloM, arregloM[0])).toString();
+            String opcion = (JOptionPane.showInputDialog(null, "Seleccione la opcion que desea realizar", "Menú", JOptionPane.INFORMATION_MESSAGE, null, arregloM, arregloM[0])).toString();
             switch (opcion) {
                 case "Convertir de peso colombiano a Dólar":
                     dolar.dolares();
@@ -91,7 +91,7 @@ public class Moneda {
         Yen yen = new Yen();
         Won won = new Won();
         try {
-            String opcion = (JOptionPane.showInputDialog(null, "ingrese una opcion", "Menú", JOptionPane.INFORMATION_MESSAGE, null, arregloM2, arregloM2[0])).toString();
+            String opcion = (JOptionPane.showInputDialog(null, "Seleccione la opcion que desea realizar", "Menú", JOptionPane.INFORMATION_MESSAGE, null, arregloM2, arregloM2[0])).toString();
             switch (opcion) {
                 case "Convertir de dolar a peso colombiano":
                     dolar.p_dolares();
@@ -140,7 +140,7 @@ public class Moneda {
 
         } else if (getValor() == 0) {
             JOptionPane.showMessageDialog(null, "Debes ingresar un valor valido");
-            menu.menufuncion();
+            menu.menuPrincipal();
 
         }
     }
@@ -163,7 +163,7 @@ public class Moneda {
 
         } else if (getValor() == 0) {
             JOptionPane.showMessageDialog(null, "Debes ingresar un valor valido");
-            menu.menufuncion();
+            menu.menuPrincipal();
         }
     }
 }
